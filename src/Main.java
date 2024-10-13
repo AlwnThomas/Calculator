@@ -19,8 +19,8 @@ public class Main implements ActionListener {
     JButton modeButton; // JButton for dropdown
     JPopupMenu modeMenu; // Popup menu for dropdown options
     JPanel panel, scipanel;
-    Font myFont = new Font("digital-7", Font.PLAIN, 60);
-    Font sciFont = new Font("digital-7", Font.PLAIN, 30);
+    Font myFont = new Font("Helvetica", Font.PLAIN, 45);
+    Font sciFont = new Font("Helvetica", Font.PLAIN, 25);
     double num1 = 0, num2 = 0, result = 0;
     Point flocation;
     String operator;
@@ -50,8 +50,8 @@ public class Main implements ActionListener {
 
         // Creating calc screen using JTextField
         textfield = new JTextField();
-        textfield.setBounds(25, 10, 400, 80);
-        textfield.setFont(new Font("digital-7", Font.PLAIN, 80));
+        textfield.setBounds(25, 40, 400, 100);
+        textfield.setFont(new Font("Helvetica", Font.PLAIN, 80));
         textfield.setHorizontalAlignment(SwingConstants.LEADING);
         textfield.setOpaque(false);
         textfield.setBorder(null);
@@ -62,20 +62,20 @@ public class Main implements ActionListener {
         textfield.getDocument().addDocumentListener(new DocumentListener() {
             private void adjustFontSize() {
                 int length = textfield.getText().length();
-                if (length > 21) {
-                    textfield.setFont(new Font("digital-7", Font.PLAIN, 33)); // Decrease font size
+                if (length > 15) {
+                    textfield.setFont(new Font("Helvetica", Font.PLAIN, 30)); // Decrease font size
                 }
-                else if (length > 18) {
-                    textfield.setFont(new Font("digital-7", Font.PLAIN, 37));
+                else if (length > 13) {
+                    textfield.setFont(new Font("Helvetica", Font.PLAIN, 40));
                 }
-                else if (length > 15) {
-                    textfield.setFont(new Font("digital-7", Font.PLAIN, 40));
+                else if (length > 11) {
+                    textfield.setFont(new Font("Helvetica", Font.PLAIN, 50));
                 }
-                else if (length > 12) {
-                    textfield.setFont(new Font("digital-7", Font.PLAIN, 50));
+                else if (length > 8) {
+                    textfield.setFont(new Font("Helvetica", Font.PLAIN, 60));
                 }
                 else {
-                    textfield.setFont(myFont); // Default font size
+                    textfield.setFont(new Font("Helvetica", Font.PLAIN, 80)); // Default font size
                 }
                 textfield.revalidate();
                 textfield.repaint();
@@ -104,8 +104,8 @@ public class Main implements ActionListener {
         divButton = new JButton("/");
         decButton = new JButton(".");
         equButton = new JButton("=");
-        delButton = new JButton("Del");
-        clrButton = new JButton("Clr");
+        delButton = new JButton("CE");
+        clrButton = new JButton("AC");
         modButton = new JButton("%");
         calcButton = new JButton("C");
 
@@ -116,7 +116,7 @@ public class Main implements ActionListener {
         Image newImg = img.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         icon = new ImageIcon(newImg);
         modeButton.setIcon(icon);
-        modeButton.setFont(new Font("digital-7", Font.PLAIN, 20));
+        modeButton.setFont(new Font("Helvetica", Font.PLAIN, 20));
         modeButton.setFocusable(false);
         modeButton.addActionListener(e -> modeMenu.show(modeButton, 0, modeButton.getHeight()));
 
@@ -159,7 +159,7 @@ public class Main implements ActionListener {
         }
 
         panel = new JPanel();
-        panel.setBounds(25, 120, 400, 400);
+        panel.setBounds(25, 145, 400, 400);
         panel.setLayout(new GridLayout(5, 4, 5, 10));
 
         panel.add(delButton);
@@ -203,8 +203,8 @@ public class Main implements ActionListener {
 
         // Creating calc screen using JTextField
         scitextfield = new JTextField();
-        scitextfield.setBounds(25, 0, 400, 80);
-        scitextfield.setFont(new Font("digital-7", Font.PLAIN, 80));
+        scitextfield.setBounds(25, 10, 400, 100);
+        scitextfield.setFont(new Font("Helvetica", Font.PLAIN, 80));
         scitextfield.setHorizontalAlignment(SwingConstants.LEADING);
         scitextfield.setOpaque(false);
         scitextfield.setBorder(null);
@@ -215,20 +215,20 @@ public class Main implements ActionListener {
         scitextfield.getDocument().addDocumentListener(new DocumentListener() {
             private void adjustFontSize() {
                 int length = scitextfield.getText().length();
-                if (length > 21) {
-                    scitextfield.setFont(new Font("digital-7", Font.PLAIN, 33)); // Decrease font size
+                if (length > 15) {
+                    scitextfield.setFont(new Font("Helvetica", Font.PLAIN, 30)); // Decrease font size
                 }
-                else if (length > 18) {
-                    scitextfield.setFont(new Font("digital-7", Font.PLAIN, 37));
+                else if (length > 13) {
+                    scitextfield.setFont(new Font("Helvetica", Font.PLAIN, 40));
                 }
-                else if (length > 15) {
-                    scitextfield.setFont(new Font("digital-7", Font.PLAIN, 40));
+                else if (length > 11) {
+                    scitextfield.setFont(new Font("Helvetica", Font.PLAIN, 50));
                 }
-                else if (length > 12) {
-                    scitextfield.setFont(new Font("digital-7", Font.PLAIN, 50));
+                else if (length > 8) {
+                    scitextfield.setFont(new Font("Helvetica", Font.PLAIN, 60));
                 }
                 else {
-                    scitextfield.setFont(myFont); // Default font size
+                    scitextfield.setFont(new Font("Helvetica", Font.PLAIN, 80));
                 }
                 scitextfield.revalidate();
                 scitextfield.repaint();
@@ -257,7 +257,7 @@ public class Main implements ActionListener {
         Image newImg = img.getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         icon = new ImageIcon(newImg);
         modeButton.setIcon(icon);
-        modeButton.setFont(new Font("digital-7", Font.PLAIN, 20));
+        modeButton.setFont(new Font("Helvetica", Font.PLAIN, 20));
         modeButton.setFocusable(false);
         modeButton.addActionListener(e -> modeMenu.show(modeButton, 0, modeButton.getHeight()));
 
@@ -296,7 +296,7 @@ public class Main implements ActionListener {
 
         for (int i = 0; i < 9; i++) {
             scifunButtons[i].addActionListener(this);
-            scifunButtons[i].setFont(sciFont);
+            scifunButtons[i].setFont(new Font("Helvetica", Font.PLAIN, 20));
             scifunButtons[i].setFocusable(false);
         }
 
@@ -361,7 +361,7 @@ public class Main implements ActionListener {
         panel.add(equButton);
 
         scipanel = new JPanel();
-        scipanel.setBounds(25, 100, 400, 150);
+        scipanel.setBounds(25, 105, 400, 150);
         scipanel.setLayout(new GridLayout(3, 3, 5, 10));
 
         scipanel.add(sinButton);
